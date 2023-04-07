@@ -94,12 +94,28 @@ root.render(
     <Saludar titulo="hola Fazt" />
     <Product />
     <Navbar />
+    <br></br>
+    <hr></hr>
     <UserCard
       name="Ryan Ray"
       amount={3000}
       married={true}
       points={[99, 33.3, 22.2]}
       address={{ street: "123 Main Street", city: "New York" }}
+      // greet={function () {
+      //   alert("Hello");
+      //   // No funciona muy bien que digamos
+      // }}
+    />
+    <UserCard
+      name="Joe Mcmillon"
+      amount={1000}
+      married={false}
+      points={[100, 20]}
+      address={{
+        street: "av some 123",
+        city: "New York",
+      }}
     />
   </>
 );
