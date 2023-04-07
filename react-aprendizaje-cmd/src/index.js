@@ -1,10 +1,10 @@
 import React from "react"; //importar react
 import ReactDom from "react-dom/client"; //importar Dom
-import { Doble } from "./Doble"; //importar funcion doble que esta src
+import { Doble } from "./Doble"; //importar función doble que esta src
 import { Saludar, UserCard } from "./Saludar";
 import Product, { Navbar } from "./Product";
 
-const rootElement = document.getElementById("root"); //seleccionar root o raiz
+const rootElement = document.getElementById("root"); //seleccionar root o raíz
 const root = ReactDom.createRoot(rootElement); //crear componente root
 
 // function Saludar() {
@@ -17,14 +17,14 @@ const root = ReactDom.createRoot(rootElement); //crear componente root
 //   );
 // }
 
-// root.render(<h1>Hello World, Hola Mundo y Hola react</h1>); //contenido que se envia a root para mostrar
+// root.render(<h1>Hello World, Hola Mundo y Hola react</h1>); //contenido que se envía a root para mostrar
 
-// root.render(Saludar()); //usar y mostrar funcion saludar
+// root.render(Saludar()); //usar y mostrar función saludar
 
 // root.render(
 //   <div>
 //     {/* <Saludar></Saludar> se pueden usar funciones como si fueran etiquetas */}
-//     {/* <Saludar/>etiqueta autocerrada */}
+//     {/* <Saludar/>etiqueta auto cerrada */}
 //     <Saludar/>
 //     <Saludar/>
 //     <Saludar/>
