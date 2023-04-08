@@ -3,9 +3,10 @@ import ReactDom from "react-dom/client"; //importar Dom
 // import { Doble } from "./Doble"; //importar función doble que esta src
 // import { Saludar, UserCard } from "./Saludar";
 // import Product, { Navbar } from "./Product";
-import { Button } from "./Button";
-import { TaskCard } from "./Task";
-import { ClaseSaludar } from "./ClaseSaludar";
+// import { Button } from "./Button";
+// import { TaskCard } from "./Task";
+// import { ClaseSaludar } from "./ClaseSaludar";
+import { Posts } from "./Posts";
 
 const rootElement = document.getElementById("root"); //seleccionar root o raíz
 const root = ReactDom.createRoot(rootElement); //crear componente root
@@ -87,9 +88,9 @@ const root = ReactDom.createRoot(rootElement); //crear componente root
 //   </>
 // );
 
-const handleChange = (e) => {
-  console.log(e.target.value);
-};
+// const handleChange = (e) => {
+//   console.log(e.target.value);
+// };
 
 root.render(
   <>
@@ -127,7 +128,7 @@ root.render(
     {/* <Button text="Click me" />
     <Button text="Pay" />
     <Button text=" " name="Joe" /> */}
-    <TaskCard ready={true} />
+    {/* <TaskCard ready={true} />
     <TaskCard ready={false} />
     <ClaseSaludar />
     <Button
@@ -140,8 +141,8 @@ root.render(
       //   console.log(e.target.value + "....");
       //   // console.log("Escribiendo en el input");
       // }}
-    />
-    <form
+    /> */}
+    {/* <form
       onSubmit={(e) => {
         //funciona como el submite normal de un form de html
         e.preventDefault(); //evita que haga su comportamiento por defecto
@@ -150,6 +151,7 @@ root.render(
     >
       <h1>Registro de usuarios</h1>
       <button>Send</button>
-    </form>
+    </form> */}
+    <Posts />
   </>
 );
