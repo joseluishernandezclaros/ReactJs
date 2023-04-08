@@ -1,3 +1,5 @@
+import { MdApi, MdZoomIn } from "react-icons/md";
+
 export function Posts() {
   return (
     <button
@@ -10,6 +12,8 @@ export function Posts() {
         //response.json() sirve para convertir datos json en datos JS
       }}
     >
+      <MdZoomIn />
+      <MdApi />
       Traer Datos
     </button>
   );
