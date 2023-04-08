@@ -1,4 +1,4 @@
-import React, { useState } from "react"; //importar react
+import React, { useState, useEffect } from "react"; //importar react
 import ReactDom from "react-dom/client"; //importar Dom
 // import { Doble } from "./Doble"; //importar función doble que esta src
 // import { Saludar, UserCard } from "./Saludar";
