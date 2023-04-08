@@ -1,4 +1,4 @@
-import React from "react"; //importar react
+import React, { useState } from "react"; //importar react
 import ReactDom from "react-dom/client"; //importar Dom
 // import { Doble } from "./Doble"; //importar función doble que esta src
 // import { Saludar, UserCard } from "./Saludar";
@@ -6,7 +6,7 @@ import ReactDom from "react-dom/client"; //importar Dom
 // import { Button } from "./Button";
 // import { TaskCard } from "./Task";
 // import { ClaseSaludar } from "./ClaseSaludar";
-import { Posts } from "./Posts";
+// import { Posts } from "./Posts";
 
 const rootElement = document.getElementById("root"); //seleccionar root o raíz
 const root = ReactDom.createRoot(rootElement); //crear componente root
@@ -156,44 +156,96 @@ root.render(
   </>
 );
 
-const users = [
-  {
-    id: 1,
-    name: "Ryan ray",
-    image: "https://robohash.org/user1",
-  },
-  {
-    id: 2,
-    name: "Joe",
-    image: "https://robohash.org/user2",
-  },
-  {
-    id: 3,
-    name: "Marcos",
-    image: "https://robohash.org/user3",
-  },
-  {
-    id: 4,
-    name: "Alberto",
-    image: "https://robohash.org/user4",
-  },
-  {
-    id: 5,
-    name: "Heriberto",
-    image: "https://robohash.org/user5",
-  },
-];
+// const users = [
+//   {
+//     id: 1,
+//     name: "Ryan ray",
+//     image: "https://robohash.org/user1",
+//   },
+//   {
+//     id: 2,
+//     name: "Joe",
+//     image: "https://robohash.org/user2",
+//   },
+//   {
+//     id: 3,
+//     name: "Marcos",
+//     image: "https://robohash.org/user3",
+//   },
+//   {
+//     id: 4,
+//     name: "Alberto",
+//     image: "https://robohash.org/user4",
+//   },
+//   {
+//     id: 5,
+//     name: "Heriberto",
+//     image: "https://robohash.org/user5",
+//   },
+// ];
+
+// root.render(
+//   <>
+//     {users.map((user, indice) => {
+//       //el metodo map se usa para poder recorrer arreglos/arrays
+//       return (
+//         <div key={indice}>
+//           <h1>{user.name}</h1>
+//           <img src={user.image} alt="robotrandom" />
+//         </div>
+//       );
+//     })}
+//   </>
+// );
+
+function Counter() {
+  // const [counter, setCounter] = useState(10); //definir counter como 10 y setcounter se usarara en el onclick para cambiar valor de counter
+
+  const [mensaje, setMensaje] = useState("");
+
+  return (
+    // <div>
+    //   <h1>Counter: {counter}</h1>
+    //   <button
+    //     onClick={() => {
+    //       setCounter(counter + 1); //sumarle 1 al counter
+    //     }}
+    //   >
+    //     Sumar
+    //   </button>
+    //   <button
+    //     onClick={() => {
+    //       setCounter(counter - 1); //sumarle 1 al counter
+    //     }}
+    //   >
+    //     Restar
+    //   </button>
+    //   <button
+    //     onClick={() => {
+    //       setCounter(1000); //definir el setcounter como 1000
+    //     }}
+    //   >
+    //     Reiniciar
+    //   </button>
+    // </div>
+
+    <div>
+      <input onChange={(e) => setMensaje(e.target.value)}></input>{" "}
+      {/* cuando se va cambiando el texto dentro del input se setea el mensaje mandando el value es decir el texto que se escribe */}
+      <button
+        onClick={() => {
+          alert("El mensaje es: " + mensaje);
+        }}
+      >
+        {/*cuando se le da click al boton se activa el alert me muestra un texto junto al mensaje que se seteo en la parte anterior almacenado en la variable mensaje*/}
+        Save
+      </button>
+    </div>
+  );
+}
 
 root.render(
   <>
-    {users.map((user, indice) => {
-      //el metodo map se usa para poder recorrer arreglos/arrays
-      return (
-        <div key={indice}>
-          <h1>{user.name}</h1>
-          <img src={user.image} alt="robotrandom" />
-        </div>
-      );
-    })}
+    <Counter />
   </>
 );
