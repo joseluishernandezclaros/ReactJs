@@ -3,7 +3,8 @@ import ReactDom from "react-dom/client"; //importar Dom
 // import { Doble } from "./Doble"; //importar función doble que esta src
 // import { Saludar, UserCard } from "./Saludar";
 // import Product, { Navbar } from "./Product";
-import { Button } from "./Button";
+// import { Button } from "./Button";
+import { TaskCard } from "./Task";
 
 const rootElement = document.getElementById("root"); //seleccionar root o raíz
 const root = ReactDom.createRoot(rootElement); //crear componente root
@@ -118,8 +119,10 @@ root.render(
         city: "New York",
       }}
     /> */}
-    <Button text="Click me" />
+    {/* <Button text="Click me" />
     <Button text="Pay" />
-    <Button text=" " name="Joe" />
+    <Button text=" " name="Joe" /> */}
+    <TaskCard ready={true} />
+    <TaskCard ready={false} />
   </>
 );
