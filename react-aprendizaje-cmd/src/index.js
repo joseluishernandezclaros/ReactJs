@@ -202,6 +202,12 @@ function Counter() {
   // const [counter, setCounter] = useState(10); //definir counter como 10 y setcounter se usarara en el onclick para cambiar valor de counter
 
   const [mensaje, setMensaje] = useState("");
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    console.log("render");
+  }, [counter]); //useEffect usado una sola vez, para que se ejecute multiples veces se debe quitar el ", []" y listo. El counter se mete dentro del array para hacer que cuando el valor de counter cambio se active el useEffect.
+  //useEffect se puede tomar como una funcion para vigitar las variables creadas en useState
 
   return (
     // <div>
@@ -239,6 +245,15 @@ function Counter() {
       >
         {/*cuando se le da click al boton se activa el alert me muestra un texto junto al mensaje que se seteo en la parte anterior almacenado en la variable mensaje*/}
         Save
+      </button>
+      <hr />
+      <h1>Counter: {counter}</h1>
+      <button
+        onClick={() => {
+          setCounter(counter + 1);
+        }}
+      >
+        Incrementar
       </button>
     </div>
   );
