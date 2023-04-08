@@ -152,6 +152,48 @@ root.render(
       <h1>Registro de usuarios</h1>
       <button>Send</button>
     </form> */}
-    <Posts />
+    {/* <Posts /> */}
+  </>
+);
+
+const users = [
+  {
+    id: 1,
+    name: "Ryan ray",
+    image: "https://robohash.org/user1",
+  },
+  {
+    id: 2,
+    name: "Joe",
+    image: "https://robohash.org/user2",
+  },
+  {
+    id: 3,
+    name: "Marcos",
+    image: "https://robohash.org/user3",
+  },
+  {
+    id: 4,
+    name: "Alberto",
+    image: "https://robohash.org/user4",
+  },
+  {
+    id: 5,
+    name: "Heriberto",
+    image: "https://robohash.org/user5",
+  },
+];
+
+root.render(
+  <>
+    {users.map((user, indice) => {
+      //el metodo map se usa para poder recorrer arreglos/arrays
+      return (
+        <div key={indice}>
+          <h1>{user.name}</h1>
+          <img src={user.image} alt="robotrandom" />
+        </div>
+      );
+    })}
   </>
 );
