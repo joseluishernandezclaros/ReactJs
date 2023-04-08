@@ -1,8 +1,9 @@
 import React from "react"; //importar react
 import ReactDom from "react-dom/client"; //importar Dom
-import { Doble } from "./Doble"; //importar función doble que esta src
-import { Saludar, UserCard } from "./Saludar";
-import Product, { Navbar } from "./Product";
+// import { Doble } from "./Doble"; //importar función doble que esta src
+// import { Saludar, UserCard } from "./Saludar";
+// import Product, { Navbar } from "./Product";
+import { Button } from "./Button";
 
 const rootElement = document.getElementById("root"); //seleccionar root o raíz
 const root = ReactDom.createRoot(rootElement); //crear componente root
@@ -86,7 +87,7 @@ const root = ReactDom.createRoot(rootElement); //crear componente root
 
 root.render(
   <>
-    <Doble />
+    {/* <Doble />
     <Saludar titulo="hola mundo" name="Joe" />
     <Saludar titulo="hola react" name="ryan" />
     <Saludar titulo="hola JSX" />
@@ -95,8 +96,8 @@ root.render(
     <Product />
     <Navbar />
     <br></br>
-    <hr></hr>
-    <UserCard
+    <hr></hr> */}
+    {/* <UserCard
       name="Ryan Ray"
       amount={3000}
       married={true}
@@ -106,8 +107,8 @@ root.render(
       //   alert("Hello");
       //   // No funciona muy bien que digamos
       // }}
-    />
-    <UserCard
+    /> */}
+    {/* <UserCard
       name="Joe Mcmillon"
       amount={1000}
       married={false}
@@ -116,6 +117,9 @@ root.render(
         street: "av some 123",
         city: "New York",
       }}
-    />
+    /> */}
+    <Button text="Click me" />
+    <Button text="Pay" />
+    <Button text=" " name="Joe" />
   </>
 );
