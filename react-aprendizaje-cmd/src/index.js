@@ -5,6 +5,7 @@ import ReactDom from "react-dom/client"; //importar Dom
 // import Product, { Navbar } from "./Product";
 // import { Button } from "./Button";
 import { TaskCard } from "./Task";
+import { ClaseSaludar } from "./ClaseSaludar";
 
 const rootElement = document.getElementById("root"); //seleccionar root o raíz
 const root = ReactDom.createRoot(rootElement); //crear componente root
@@ -124,5 +125,6 @@ root.render(
     <Button text=" " name="Joe" /> */}
     <TaskCard ready={true} />
     <TaskCard ready={false} />
+    <ClaseSaludar />
   </>
 );
