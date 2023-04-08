@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 export function Button({ text, name }) {
   // console.log(text); //recibir valor enviado desde la etiqueta index
   return (
-    <button>
+    <button
+      onClick={function () {
+        console.log("hola mundo");
+      }}
+    >
       {text} - {name}
     </button>
   );
@@ -15,4 +19,5 @@ Button.prototype = {
 
 Button.defaultProps = {
   name: "Some user",
+  text: "Saludar",
 }; //Definir valores por defectos a objetos NO definidos

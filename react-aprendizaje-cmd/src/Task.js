@@ -5,7 +5,7 @@ export function TaskCard(props) {
   //   const titleStyle = { fontWeight: "lighter" };
 
   return (
-    <div class="card">
+    <div className="card">
       <h1 className="">Primer Tarea</h1>
       <span className={props.ready ? "bg-green" : "bg-red"}>
         {props.ready === true ? "tarea realizada" : "tarea pendiente"}

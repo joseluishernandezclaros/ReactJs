@@ -3,7 +3,7 @@ import ReactDom from "react-dom/client"; //importar Dom
 // import { Doble } from "./Doble"; //importar función doble que esta src
 // import { Saludar, UserCard } from "./Saludar";
 // import Product, { Navbar } from "./Product";
-// import { Button } from "./Button";
+import { Button } from "./Button";
 import { TaskCard } from "./Task";
 import { ClaseSaludar } from "./ClaseSaludar";
 
@@ -87,6 +87,10 @@ const root = ReactDom.createRoot(rootElement); //crear componente root
 //   </>
 // );
 
+const handleChange = (e) => {
+  console.log(e.target.value);
+};
+
 root.render(
   <>
     {/* <Doble />
@@ -126,5 +130,26 @@ root.render(
     <TaskCard ready={true} />
     <TaskCard ready={false} />
     <ClaseSaludar />
+    <Button
+      id="hola"
+      onChange={handleChange}
+      onDoubleClick={() => {
+        console.log("Doble click");
+      }}
+      // onChange={function (e) {
+      //   console.log(e.target.value + "....");
+      //   // console.log("Escribiendo en el input");
+      // }}
+    />
+    <form
+      onSubmit={(e) => {
+        //funciona como el submite normal de un form de html
+        e.preventDefault(); //evita que haga su comportamiento por defecto
+        console.log("Enviado");
+      }}
+    >
+      <h1>Registro de usuarios</h1>
+      <button>Send</button>
+    </form>
   </>
 );
