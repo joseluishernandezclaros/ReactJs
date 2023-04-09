@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 
 function TaskForm(props) {
-  const [Titulo, setTitulo] = useState("");
+  const [title, settitle] = useState("");
 
   const manejarSubmit = (e) => {
     e.preventDefault(); //funcion para que lo que se muestra en consola se mantenga ahi y no desaparesca durante la carga del submit
-    const newTask = {
-      Titulo,
-      // id: 545,
-      // descripcion: "algo",
-    };
+    props.funcionTask(title);
 
-    props.funcionTask(newTask);
-    console.log(props.funcionTask(newTask));
     // props.createTask(newTask);
     // return props.crearTask(newTask);
     // console.log(newTask);
@@ -25,7 +19,7 @@ function TaskForm(props) {
       <input
         placeholder="Escribe tu tarea"
         onChange={(e) => {
-          setTitulo(e.target.value); //definir el valor de lo que se escribe en el input a la variable titulo del useState
+          settitle(e.target.value); //definir el valor de lo que se escribe en el input a la variable title del useState
         }}
       ></input>
       <button>Guardar</button>

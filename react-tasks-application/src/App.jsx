@@ -10,8 +10,15 @@ function App() {
     setTasks(tareas);
   }, []);
 
-  function createTask(task) {
-    setTasks([...tasks, task]);
+  function createTask(titleTask) {
+    setTasks([
+      ...tasks,
+      {
+        title: titleTask,
+        id: tasks.length,
+        descripcion: "tarea a realizar",
+      },
+    ]);
     // setTasks([...tasks, task]); //agarrar el objeto tasks y copiarlo en una nueva variable llamada task con la finalidad de usar los elementos ya existentes y agregarle unos nuevos sin modificar la variable original
   }
 
