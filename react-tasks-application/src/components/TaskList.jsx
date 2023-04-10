@@ -7,7 +7,9 @@ function TaskList(props) {
   return (
     <div>
       {props.funcionTareas.map((task) => {
-        return <TaskCard key={task.id} task={task} />;
+        return (
+          <TaskCard key={task.id} task={task} deleteTask={props.deleteTask} />
+        );
         // console.log(task);
         //recoorrer con map la lista de elementos
       })}
