@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState /*useContext*/ } from "react";
+// import { TaskContext } from "../context/TaskContext";
 
 function TaskForm(props) {
   const [title, settitle] = useState("");
   const [descripcion, setDescripcion] = useState("");
+
+  // const valor = useContext(TaskContext);
+  // console.log(valor);
 
   const manejarSubmit = (e) => {
     e.preventDefault(); //funcion para que lo que se muestra en consola se mantenga ahi y no desaparesca durante la carga del submit
