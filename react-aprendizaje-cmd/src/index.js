@@ -11,15 +11,15 @@ import ReactDom from "react-dom/client"; //importar Dom
 const rootElement = document.getElementById("root"); //seleccionar root o raíz
 const root = ReactDom.createRoot(rootElement); //crear componente root
 
-// function Saludar() {
-//   // return <h1>Este es un componente</h1>
-//   return (
-//     <div>
-//       <h1>Este es un componente</h1>
-//       <p>lorem 123</p>
-//     </div>
-//   );
-// }
+function Saludar() {
+  // return <h1>Este es un componente</h1>
+  return (
+    <div>
+      <h1>Este es un componente</h1>
+      <p>lorem 123</p>
+    </div>
+  );
+}
 
 // root.render(<h1>Hello World, Hola Mundo y Hola react</h1>); //contenido que se envía a root para mostrar
 
@@ -262,5 +262,6 @@ function Counter() {
 root.render(
   <>
     <Counter />
+    <Saludar />
   </>
 );
