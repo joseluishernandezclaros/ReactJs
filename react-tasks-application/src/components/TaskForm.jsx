@@ -1,9 +1,10 @@
-import React, { useState /*useContext*/ } from "react";
-// import { TaskContext } from "../context/TaskContext";
+import React, { useState, useContext } from "react";
+import { TaskContext } from "../context/TaskContext";
 
-function TaskForm(props) {
+function TaskForm() {
   const [title, settitle] = useState("");
   const [descripcion, setDescripcion] = useState("");
+  const { createTask } = useContext(TaskContext);
 
   // const valor = useContext(TaskContext);
   // console.log(valor);
@@ -11,8 +12,7 @@ function TaskForm(props) {
   const manejarSubmit = (e) => {
     e.preventDefault(); //funcion para que lo que se muestra en consola se mantenga ahi y no desaparesca durante la carga del submit
 
-    props.funcionTask(title, descripcion);
-
+    createTask(title, descripcion);
     // props.createTask(newTask);
     // return props.crearTask(newTask);
     // console.log(newTask);

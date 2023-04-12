@@ -1,20 +1,23 @@
-// import { TaskContext } from "../context/TaskContext";
-// import { useContext } from "react";
+import { TaskContext } from "../context/TaskContext";
+import { useContext } from "react";
 
 export function TaskCard(props) {
-  // console.log(props.task);
+  // console.log(task);
 
   // const valor = useContext(TaskContext);
   // console.log(valor);
+
+  const { deleteTask } = useContext(TaskContext);
+
+  // console.log(props.task.title);
 
   return (
     <div>
       <h1>{props.task.title}</h1>
       <p>{props.task.descripcion}</p>
-
       <button
         onClick={() => {
-          props.deleteTask(props.task.id); //llama funcion deteleTask y le manda el id que se ha selecionado para que verifique y elemine
+          deleteTask(props.task.id); //llama funcion deteleTask y le manda el id que se ha selecionado para que verifique y elemine
           // console.log(props.task.id);
         }}
       >
